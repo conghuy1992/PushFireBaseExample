@@ -23,6 +23,12 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         if (remoteMessage.getData().size() > 0)
             Log.e(TAG, "getData: " + remoteMessage.getData().toString());
 
+        if (remoteMessage.getNotification() != null) {
+            Log.d(TAG, "Notification Body: " + remoteMessage.getNotification().getBody());
+        }
+
+//        {"key2":"456","key1":"123"}
+
     }
 
 
